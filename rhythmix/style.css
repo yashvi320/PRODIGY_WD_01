@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    background-color: #6b6568;
+    text-align: center;
+}
+
+.nav-bar{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: 7fr 1fr;
+    place-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: 12vh;
+    padding-top: 15px;
+    margin-bottom: 12vh;
+    background-color:bisque;
+    font-size: larger;
+    transform: translateY(0);
+    z-index: 1;
+    transition: 500ms;
+}
+
+.nav-bar.inactive{
+    transform: translateY(-9vh);
+}
+.logo{
+    grid-column: 1;
+    grid-row: 1;
+}
+#l{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: 5vw;
+    grid-column: 3/4;
+    grid-row: 1;
+}
+
+#l a{
+    text-decoration: none;
+    color: black;
+    padding-block: 10px;
+}
+
+.down-image{
+    grid-column: 1/6;
+    grid-row: 2;
+    width: 100%;
+    text-align: center;
+}
+
+.down-image img{
+    width: 20px;
+    cursor: pointer;
+}
+
+section{
+   height: 100vh;
+   width: 100%;
+
+   display: grid;
+   place-items: center;
+}
+
+.carousel-container{
+    position: relative;
+    width: 850px;
+    height: 450px;
+    border: 2px bisque;
+    overflow: hidden;
+}
+
+.carousel-slide .image-container{
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide{
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+.carousel-slide.active{
+    left: 0; 
+    transition: all 0.3s ease-out; 
+}
+
+.carousel-container .clickable:hover{
+    /* cursor: url('images/icons/click.png'),auto; */
+    cursor: pointer;
+}
+
+.carousel-container img{
+    width: 100%;
+}
+
+
+.image-container.prev{
+    left:-100%;
+    transition: all 1000ms;
+}
+
+.carousel-icons{
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    width: 50%;
+    height: 10%;
+}
+
+.icon{
+    width: 1vw;
+    opacity: 0.5;
+    transition: all 1000ms;
+}
+
+.icon.active{
+    opacity: 1;
+
+    transition: all 1000ms;
+}
+
+.images{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+
+.values{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    font-size: 30px;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    font-size: 30px;
+}
+
+h2{
+    font-size: 70px;
+}
+h5{
+    font-size: 40px;
+}
+.text{
+    font-size: 20px;
+}
